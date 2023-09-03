@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffffff;
+    padding-left: 470px;
+}
+
+input[type="checkbox"].button + label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-color: rgba(17, 45, 68, 0.3);
+    border-right: 0.5px right rgba(17, 45, 68, 0.8);
+    border-width: 1px;
+    border-radius: 60px;
+    padding-right: -100px;
+  }
+  
+input[type="checkbox"].button + label::before {
+    content: "SWIPE TO PAY | $$$" ;
+    padding-left: 145px;
+    padding-top: 35px;
+    font-family: 'Poppins', 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+    font-weight: 500;
+    color: rgba(17, 45, 68);
+    letter-spacing: 1px;
+    width: 255px;
+    height: 65px;
+    background-color: rgba(108, 243, 255);
+    border-radius: 60px;
+    margin-right: 500px;
+    transition: background-color 0.5s ease-in-out;
+  }
+  
+input[type="checkbox"].button + label::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    content: "";
+    font-size: 5;
+    height: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    background-image: url("Vector.png");
+    background-color: rgba(17, 45, 68);
+    color: rgb(114, 231, 134);
+    border-radius: 60px;
+    transition: 0.5s ease-in-out;
+  }
+  
+input[type="checkbox"].button:checked + label::before {
+    background-color: rgba(17, 45, 68);
+  }
+  
+input[type="checkbox"].button:checked + label::after {
+    content: "";
+    color: aquamarine;
+    transform: translateX(235%);
+    background-color: rgba(17, 45, 68, 1);
+    transition: 0.5s ease-in-out;
+  }
+
+
